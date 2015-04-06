@@ -3,5 +3,12 @@
   "description": "A Go Events CRUD API using the native net/http library and mgo.",
   "repository": "https://github.com/fagnercarvalho/golang-events-api",
   "logo": "https://raw.githubusercontent.com/fagnercarvalho/golang-events-api/master/gopher.png",
-  "keywords": ["golang", "mgo", "net", "http"]
+  "keywords": ["golang", "mgo", "net", "http"],
+  "env": {
+	"BUILDPACK_URL": "http://github.com/kr/heroku-buildpack-go"
+  },
+  "addons": [
+    "papertrail",
+    "mongolab"
+  ]
 }
