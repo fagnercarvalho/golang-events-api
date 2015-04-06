@@ -1,4 +1,5 @@
 # Go Events API
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 A Go Events CRUD API using the native net/http library and [mgo](https://github.com/go-mgo/mgo). 
 
