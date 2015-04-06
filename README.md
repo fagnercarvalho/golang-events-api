@@ -28,3 +28,30 @@ The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/) T
    ```
   
 There are 2 parameters: the port represents the HTTP port to the API and the conn represents the MongoDB connection string where the event data will be persisted. The default values are "8080" and "mongodb://localhost:27017", respectively.
+
+## Usage
+
+There are 5 URLs that allow CRUD operations in a Event resource:
+
+- **<code>GET</code> events/ to get all available events.
+- **<code>GET</code> events/:id to get a specific event.
+- **<code>POST</code> events/ to include a event.
+- **<code>PUT</code> events/:id/ to update a event.
+- **<code>DELETE</code> events/:id to delete a event.
+
+The event resource has the following format:
+
+```json
+{ 
+"name": "Golang POA Meetup", 
+"begin": "2020-04-15T13:00:15-07:00", 
+"end": "2020-04-15T18:00:15-07:00", 
+"location": 
+ { 
+  "latitude": 30.0331,
+  "longitude": 51.2300, 
+  "name": "Porto Alegre" 
+  }
+}
+```
+
