@@ -31,7 +31,7 @@ There are 2 parameters: the port represents the HTTP port to the API and the con
 
 ## Usage
 
-There are 5 URLs that allow CRUD operations in a Event resource:
+There are 5 URLs that allow CRUD operations in a event resource:
 
 - **<code>GET</code> events/** to get all available events.
 - **<code>GET</code> events/:id** to get a specific event.
