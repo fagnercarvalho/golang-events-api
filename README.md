@@ -4,6 +4,8 @@ A Go Events CRUD API using the native net/http library and [mgo](https://github.
 
 Feel free to use and/or make any improvements to it. 
 
+The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/) The gopher vector data was made by Takuya Ueda (http://u.hinoichi.net). Licensed under the Creative Commons 3.0 Attributions license.
+
 ## Instructions
 
 1. Install mgo dependency. 
