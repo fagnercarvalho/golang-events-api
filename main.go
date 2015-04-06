@@ -88,7 +88,7 @@ func createEvent(event *Event) {
 	session := getMongoSession()
 	defer session.Close()
 
-	collection := session.DB("events").C("events")
+	collection := session.DB("").C("events")
 	err := collection.Insert(event)
 	if err != nil {
 		panic(err)
@@ -107,7 +107,7 @@ func readEvent(id string) (*Event, error) {
 	defer session.Close()
 
 	event := Event{}
-	collection := session.DB("events").C("events")
+	collection := session.DB("").C("events")
 	query := collection.Find(bson.M{"_id": objectId})
 	err := query.One(&event)
 	if err != nil {
@@ -122,7 +122,7 @@ func readEvents() []Event {
 	defer session.Close()
 
 	events := []Event{}
-	collection := session.DB("events").C("events")
+	collection := session.DB("").C("events")
 	query := collection.Find(nil)
 	query.All(&events)
 
@@ -140,7 +140,7 @@ func updateEvent(id string, event *Event) error {
 	session := getMongoSession()
 	defer session.Close()
 
-	collection := session.DB("events").C("events")
+	collection := session.DB("").C("events")
 	err := collection.UpdateId(objectId, event)
 	if err != nil {
 		panic(err)
@@ -160,7 +160,7 @@ func removeEvent(id string) error {
 	session := getMongoSession()
 	defer session.Close()
 
-	collection := session.DB("events").C("events")
+	collection := session.DB("").C("events")
 	err := collection.Remove(bson.M{"_id": objectId})
 	if err != nil {
 		panic(err)
